@@ -7,5 +7,6 @@ spec:
   endpointSelector:
     matchLabels:
       app: frontend
+      app: frontend-external
     ingress:
     - {}
