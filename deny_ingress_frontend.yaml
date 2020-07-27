@@ -1,0 +1,11 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+decription: "Deny all local service to talk directly to frontend"
+metadata: 
+  name: "deny-all-ingress-to-frontend"
+spec:
+  endpointSelector:
+    matchLabels:
+      app: frontend
+    ingress:
+    - {}
