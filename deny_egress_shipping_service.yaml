@@ -1,0 +1,10 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+description: "policy to deny all egress traffic from shipping service"
+metadata:
+  name: "deny-all-egress-from-shipping-service"
+spec:
+  endpointSelector: 
+    app: shippingservice
+  egress:
+  - {}
